@@ -10,18 +10,24 @@ public class PlayerController : MonoBehaviour
     private Vector3 normalizedInputs; 
     private Rigidbody selfRigedbody;
 
+    // item pickup
     private List<string> inventory;
+
+    // tile interaction
+    private GameObject tileObject;
 
     public void Start()
     {
         selfRigedbody = GetComponent<Rigidbody>();
         inventory = new List<string>();
+        tileObject = null;
     }
 
     
     public void Update()
     {
-        ProcessInputs();
+        MovementInputs();
+        TileInputs();
     }
 
     public void FixedUpdate()
@@ -41,20 +47,20 @@ public class PlayerController : MonoBehaviour
 
     /* INPUT */
 
-    private void ProcessInputs()
+    private void MovementInputs()
     {
         normalizedInputs = (transform.right * Input.GetAxis("Horizontal")) +
             (transform.forward * Input.GetAxis("Vertical"));
         normalizedInputs = Vector3.Normalize(normalizedInputs);
+    }
 
+    private void TileInputs()
+    {
         if (Input.GetButtonDown("Fire1")){
-            
+            if (tileObject){
+                Debug.Log("Action Tile");
+            }
         }
-
-        if (Input.GetButtonDown("Fire2")){
-            
-        }
-
     }
 
     /* PHYSICS */
@@ -76,6 +82,17 @@ public class PlayerController : MonoBehaviour
             Item otherItem = other.gameObject.GetComponent<Item>();
             AddToInventory(otherItem.name);
             otherItem.Remove();
+        }
+
+        else if(other.gameObject.tag == "Tile"){
+            tileObject = other.gameObject;
+        }
+    }
+
+    void OnTriggerExit(Collider other)
+    {
+        if(other.gameObject.tag == "Tile"){
+            tileObject = null;
         }
     }
 
