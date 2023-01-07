@@ -4,19 +4,18 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    public delegate void PlayerAbility();
-    public static event PlayerAbility SlowTime;
-    public static event PlayerAbility SkipDimension;
-
     public float speed;
     public Animator animator;
     
     private Vector3 normalizedInputs; 
     private Rigidbody selfRigedbody;
 
+    private List<string> inventory;
+
     public void Start()
     {
         selfRigedbody = GetComponent<Rigidbody>();
+        inventory = new List<string>();
     }
 
     
@@ -31,6 +30,15 @@ public class PlayerController : MonoBehaviour
         AnimateWithInput();
     }
 
+    /* DATA */
+
+    private void AddToInventory(string item){
+        inventory.Add(item);
+
+        foreach(string thing in inventory)
+        Debug.Log(thing);
+    }
+
     /* INPUT */
 
     private void ProcessInputs()
@@ -40,13 +48,12 @@ public class PlayerController : MonoBehaviour
         normalizedInputs = Vector3.Normalize(normalizedInputs);
 
         if (Input.GetButtonDown("Fire1")){
-            SlowTime();
+            
         }
 
         if (Input.GetButtonDown("Fire2")){
-            SkipDimension();
+            
         }
-
 
     }
 
@@ -55,6 +62,21 @@ public class PlayerController : MonoBehaviour
     private void MoveWithInput()
     {
         selfRigedbody.velocity = normalizedInputs * speed;
+    }
+
+    void OnCollisionEnter(Collision other){
+        if(other.gameObject.tag == "Hazard"){
+            Destroy(this.gameObject);
+        }
+    }
+
+    void OnTriggerEnter(Collider other)
+    {
+        if(other.gameObject.tag == "Item"){
+            Item otherItem = other.gameObject.GetComponent<Item>();
+            AddToInventory(otherItem.name);
+            otherItem.Remove();
+        }
     }
 
     /* ANIMATIONS */
