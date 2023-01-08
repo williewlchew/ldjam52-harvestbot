@@ -58,7 +58,7 @@ public class PlayerController : MonoBehaviour
     {
         if (Input.GetButtonDown("Fire1")){
             if (tileObject){
-                Debug.Log("Action Tile");
+                tileObject.GetComponent<Plant>().Action(inventory);
             }
         }
     }
