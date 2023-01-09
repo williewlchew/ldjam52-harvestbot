@@ -5,23 +5,18 @@ using UnityEngine;
 public class TextTrigger : MonoBehaviour
 {
     public string MessageText;
-    public GameObject Self;
     public TextBubble textBubble;
-    // public PlayerController player;
+    public GameObject textBubbleObject;
+
     void OnTriggerEnter (Collider other)
     {
         textBubble.DisplayMessage(MessageText);
-        Self.SetActive(false);
-    }
-    // Start is called before the first frame update
-    void Start()
-    {
-        Self.SetActive(true);
+        textBubbleObject.SetActive(true);
     }
 
-    // Update is called once per frame
-    void Update()
+    void OnTriggerExit (Collider other)
     {
-        
+        textBubbleObject.SetActive(false);
+        Destroy(this.gameObject);
     }
 }
