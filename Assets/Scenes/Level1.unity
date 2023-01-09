@@ -9813,6 +9813,10 @@ PrefabInstance:
       propertyPath: UIWateringCan
       value: 
       objectReference: {fileID: 459540608}
+    - target: {fileID: 9119666640539057885, guid: fba9a6ffbda11a44d89faa579d47502d, type: 3}
+      propertyPath: itemPickupAudio
+      value: 
+      objectReference: {fileID: 5740477504114214654, guid: 71c21db2991c5094bb0db3d2f81bd549, type: 3}
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: fba9a6ffbda11a44d89faa579d47502d, type: 3}
