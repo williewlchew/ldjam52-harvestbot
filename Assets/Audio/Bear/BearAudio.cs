@@ -2,20 +2,26 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Water : MonoBehaviour
+public class BearAudio : MonoBehaviour
 {
     public AudioSource audio;
-    public AudioClip water1;
-    public AudioClip water2;
+    public AudioClip bear1;
+    public AudioClip bear2;
+    public AudioClip bear3;
+    public AudioClip bear4;
     private int randomNum;
 
-    public void PlayWaterSound()
+    public void PlayBearSound()
     {
-        randomNum = Random.Range(1, 2);
+        randomNum = Random.Range(1, 4);
         if (randomNum == 1) {
-            audio.clip = water1;
+            audio.clip = bear1;
+        } else if (randomNum == 2) {
+            audio.clip = bear2;
+        } else if (randomNum == 3) {
+            audio.clip = bear3;
         } else {
-            audio.clip = water2;
+            audio.clip = bear4;
         }
         audio.Play();
     }
@@ -31,7 +37,7 @@ public class Water : MonoBehaviour
     {
         // if (Input.GetMouseButtonDown(1)) {
         //     Debug.Log("CLICK");
-        //     PlayWaterSound();
+        //     PlayBearSound();
         // }
     }
 }
