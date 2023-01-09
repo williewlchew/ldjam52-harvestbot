@@ -2,26 +2,26 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Fart : MonoBehaviour
+public class ShovelAudio : MonoBehaviour
 {
     public AudioSource audio;
-    public AudioClip fart1;
-    public AudioClip fart2;
-    public AudioClip fart3;
-    public AudioClip fart4;
+    public AudioClip shovel1;
+    public AudioClip shovel2;
+    public AudioClip shovel3;
+    public AudioClip shovel4;
     private int randomNum;
 
-    public void PlayFartSound()
+    public void PlayShovelSound()
     {
         randomNum = Random.Range(1, 4);
         if (randomNum == 1) {
-            audio.clip = fart1;
+            audio.clip = shovel1;
         } else if (randomNum == 2) {
-            audio.clip = fart2;
+            audio.clip = shovel2;
         } else if (randomNum == 3) {
-            audio.clip = fart3;
+            audio.clip = shovel3;
         } else {
-            audio.clip = fart4;
+            audio.clip = shovel4;
         }
         audio.Play();
     }
@@ -37,7 +37,7 @@ public class Fart : MonoBehaviour
     {
         // if (Input.GetMouseButtonDown(1)) {
         //     Debug.Log("CLICK");
-        //     PlayFartSound();
+        //     PlayShovelSound();
         // }
     }
 }

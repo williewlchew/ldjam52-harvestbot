@@ -2,26 +2,26 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Bear : MonoBehaviour
+public class FartAudio : MonoBehaviour
 {
     public AudioSource audio;
-    public AudioClip bear1;
-    public AudioClip bear2;
-    public AudioClip bear3;
-    public AudioClip bear4;
+    public AudioClip fart1;
+    public AudioClip fart2;
+    public AudioClip fart3;
+    public AudioClip fart4;
     private int randomNum;
 
-    public void PlayBearSound()
+    public void PlayFartSound()
     {
         randomNum = Random.Range(1, 4);
         if (randomNum == 1) {
-            audio.clip = bear1;
+            audio.clip = fart1;
         } else if (randomNum == 2) {
-            audio.clip = bear2;
+            audio.clip = fart2;
         } else if (randomNum == 3) {
-            audio.clip = bear3;
+            audio.clip = fart3;
         } else {
-            audio.clip = bear4;
+            audio.clip = fart4;
         }
         audio.Play();
     }
@@ -37,7 +37,7 @@ public class Bear : MonoBehaviour
     {
         // if (Input.GetMouseButtonDown(1)) {
         //     Debug.Log("CLICK");
-        //     PlayBearSound();
+        //     PlayFartSound();
         // }
     }
 }

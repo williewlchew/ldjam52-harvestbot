@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    public GameManager gameManager;
     public float speed;
     public Animator animator;
     
@@ -40,6 +41,7 @@ public class PlayerController : MonoBehaviour
 
     private void AddToInventory(string item){
         inventory.Add(item);
+        gameManager.PickupItem(item);
 
         foreach(string thing in inventory)
         Debug.Log(thing);

@@ -2,26 +2,20 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Shovel : MonoBehaviour
+public class WaterAudio : MonoBehaviour
 {
     public AudioSource audio;
-    public AudioClip shovel1;
-    public AudioClip shovel2;
-    public AudioClip shovel3;
-    public AudioClip shovel4;
+    public AudioClip water1;
+    public AudioClip water2;
     private int randomNum;
 
-    public void PlayShovelSound()
+    public void PlayWaterSound()
     {
-        randomNum = Random.Range(1, 4);
+        randomNum = Random.Range(1, 2);
         if (randomNum == 1) {
-            audio.clip = shovel1;
-        } else if (randomNum == 2) {
-            audio.clip = shovel2;
-        } else if (randomNum == 3) {
-            audio.clip = shovel3;
+            audio.clip = water1;
         } else {
-            audio.clip = shovel4;
+            audio.clip = water2;
         }
         audio.Play();
     }
@@ -37,7 +31,7 @@ public class Shovel : MonoBehaviour
     {
         // if (Input.GetMouseButtonDown(1)) {
         //     Debug.Log("CLICK");
-        //     PlayShovelSound();
+        //     PlayWaterSound();
         // }
     }
 }

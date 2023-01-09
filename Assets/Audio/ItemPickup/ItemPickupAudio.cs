@@ -2,14 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DoorSwitch : MonoBehaviour
+public class ItemPickupAudio : MonoBehaviour
 {
     public AudioSource audio;
-    public AudioClip doorSwtich;
+    public AudioClip itemPickup;
 
-    public void PlayDoorSwitchSound()
+    public void PlayItemPickupSound()
     {
-        audio.clip = doorSwtich;
+        audio.clip = itemPickup;
         audio.Play();
     }
 
@@ -24,7 +24,7 @@ public class DoorSwitch : MonoBehaviour
     {
         // if (Input.GetMouseButtonDown(1)) {
         //     Debug.Log("CLICK");
-        //     PlayDoorSwitchSound();
+        //     PlayItemPickupSound();
         // }
     }
 }
