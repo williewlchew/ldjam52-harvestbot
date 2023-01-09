@@ -630,6 +630,10 @@ PrefabInstance:
       propertyPath: gameManager
       value: 
       objectReference: {fileID: 134892567}
+    - target: {fileID: 53583594269088452, guid: b76da4281cfee414a969543cacd89fee, type: 3}
+      propertyPath: currentLevel
+      value: Level0
+      objectReference: {fileID: 0}
     - target: {fileID: 53583594269088453, guid: b76da4281cfee414a969543cacd89fee, type: 3}
       propertyPath: m_RootOrder
       value: 12
@@ -974,7 +978,7 @@ PrefabInstance:
       objectReference: {fileID: 928980879}
     - target: {fileID: 7365601161431789925, guid: ba035b572be8f2347ad6c0b1cf2df636, type: 3}
       propertyPath: plantSprites.Array.size
-      value: 6
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 7365601161431789925, guid: ba035b572be8f2347ad6c0b1cf2df636, type: 3}
       propertyPath: plantSprites.Array.data[0]
@@ -987,15 +991,15 @@ PrefabInstance:
     - target: {fileID: 7365601161431789925, guid: ba035b572be8f2347ad6c0b1cf2df636, type: 3}
       propertyPath: plantSprites.Array.data[2]
       value: 
-      objectReference: {fileID: 21300000, guid: e6b18fce3a77d944b872de851264f10c, type: 3}
+      objectReference: {fileID: 21300000, guid: 9a91128c54afc2a43984418d70c58157, type: 3}
     - target: {fileID: 7365601161431789925, guid: ba035b572be8f2347ad6c0b1cf2df636, type: 3}
       propertyPath: plantSprites.Array.data[3]
       value: 
-      objectReference: {fileID: 21300000, guid: 9a91128c54afc2a43984418d70c58157, type: 3}
+      objectReference: {fileID: 21300000, guid: 7d0606aecc633374ba8c24fb57a1d2c4, type: 3}
     - target: {fileID: 7365601161431789925, guid: ba035b572be8f2347ad6c0b1cf2df636, type: 3}
       propertyPath: plantSprites.Array.data[4]
       value: 
-      objectReference: {fileID: 21300000, guid: 7d0606aecc633374ba8c24fb57a1d2c4, type: 3}
+      objectReference: {fileID: 21300000, guid: 1463ec251d7ec5d43aecd4dd5804426c, type: 3}
     - target: {fileID: 7365601161431789925, guid: ba035b572be8f2347ad6c0b1cf2df636, type: 3}
       propertyPath: plantSprites.Array.data[5]
       value: 
