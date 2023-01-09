@@ -6,6 +6,8 @@ public class Plant : MonoBehaviour
 {
     private int state;
     public Animator animator;
+    public GameObject reward;
+    public Transform rewardLocation;
 
     // Start is called before the first frame update
     void Start()
@@ -15,33 +17,39 @@ public class Plant : MonoBehaviour
         UpdateVisuals();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     public void Action(List<string> items)
     {
         if(CheckItems(items)){
-            if(state <= 4)
+            state += 1;
+            if(state >= 3)
             {
-                state += 1;
+                GetReward();
             }
-            else{
-                state = 0;
-            }
-            
-        }
-        else{
-            Debug.Log("No Banana");
         }
         UpdateVisuals();
     }
 
     private bool CheckItems(List<string> items)
     {
-        return items.Contains("Banana");
+        switch (state) 
+        {
+            case 0:
+                return items.Contains("Rake");
+            case 1:
+                return items.Contains("WaterCan");
+            case 2:
+                return items.Contains("Seeds");
+            default:
+                return items.Contains("Banana");
+        }
+    }
+
+    private void GetReward()
+    {
+        // fill in
+        Debug.Log("You win");
+
+        Instantiate(reward, rewardLocation.position, Quaternion.identity);
     }
 
     public void UpdateVisuals()
