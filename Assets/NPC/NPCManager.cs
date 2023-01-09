@@ -16,7 +16,7 @@ public class NPCManager : MonoBehaviour
     void Start() 
     {
         agent = GetComponent<UnityEngine.AI.NavMeshAgent>();
-        _animator.SetInteger("CurrentAnimation", 0);
+        _animator.SetFloat("CurrentAnimation", 0);
 
         // nav
         agent.isStopped = true;
@@ -38,24 +38,24 @@ public class NPCManager : MonoBehaviour
             agent.isStopped = false;
             AnimateMovement(patrolPoints2[currentPatrol2Point].position);
         }
+        
     }
 
     /* Attack */
     public void Attack(Vector3 target)
     {
-        _animator.SetInteger("CurrentAnimation", 21);
         StartCoroutine(AttackRoutine(target));
-        attacking = false;
-        agent.isStopped = false;
-        _animator.SetInteger("CurrentAnimation", 0);
     }
 
     IEnumerator AttackRoutine(Vector3 target)
     {
+        _animator.SetFloat("CurrentAnimation", 4);
         while (!AtCurrentGoal(target)) {
-            transform.position = Vector3.MoveTowards(transform.position, target, 10 * Time.deltaTime);
+            transform.position = Vector3.MoveTowards(transform.position, target, 20 * Time.deltaTime);
             yield return null;
         }
+        attacking = false;
+        agent.isStopped = false;
     }
 
 
@@ -75,10 +75,10 @@ public class NPCManager : MonoBehaviour
     /* Visuals */
     private void AnimateMovement(Vector3 target){
         if(target.z > transform.position.z){
-            _animator.SetInteger("CurrentAnimation", 2);
+            _animator.SetFloat("CurrentAnimation", 2);
         }
         else{
-            _animator.SetInteger("CurrentAnimation", 1);
+            _animator.SetFloat("CurrentAnimation", 1);
         }
     }
 }
