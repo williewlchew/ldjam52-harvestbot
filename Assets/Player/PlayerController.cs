@@ -101,19 +101,19 @@ public class PlayerController : MonoBehaviour
     private void AnimateWithInput()
     {
         if (normalizedInputs.z > 0.5){
-            animator.SetInteger("WalkDirection", 1);
+            animator.SetFloat("WalkDirection", 1);
         }
         if (normalizedInputs.z < -0.5){
-            animator.SetInteger("WalkDirection", 2);
+            animator.SetFloat("WalkDirection", 2);
         }
         if (normalizedInputs.x > 0.5){
-            animator.SetInteger("WalkDirection", 3);
+            animator.SetFloat("WalkDirection", 4);
         }
         if (normalizedInputs.x < -0.5){
-            animator.SetInteger("WalkDirection", 4);
+            animator.SetFloat("WalkDirection", 3);
         }
         if (normalizedInputs.x > -0.5 && normalizedInputs.x < 0.5 && normalizedInputs.z < 0.5 && normalizedInputs.z > -0.5 ){
-            animator.SetInteger("WalkDirection", 0);
+            animator.SetFloat("WalkDirection", 0);
         }
     }
 }

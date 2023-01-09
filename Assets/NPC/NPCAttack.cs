@@ -2,6 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/*
+    bool 
+
+    trig enter
+        wait for time
+        if in prox, attack
+    trig exit
+        in prox false
+        attacking = false
+*/
+
 public class NPCAttack : MonoBehaviour
 {
     public NPCManager _bearManager;
@@ -10,12 +21,14 @@ public class NPCAttack : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        if(other.gameObject.tag == "Player"){
+        if(other.gameObject.tag == "Player")
+        {
             inProximity = true;
             _bearManager.attacking = true;
             _bearManager.agent.isStopped = true;
-            StartCoroutine(AttackRoutine(other.gameObject.transform.position, attackWait));
-            _bearManager._animator.SetInteger("CurrentAnimation", 20);
+            _bearManager._animator.SetFloat("CurrentAnimation", 3);
+
+            StartCoroutine(AttackRoutine(other.gameObject, attackWait)); 
         }
     }
 
@@ -25,15 +38,22 @@ public class NPCAttack : MonoBehaviour
             inProximity = false;
             _bearManager.attacking = false;
             _bearManager.agent.isStopped = false;
-            _bearManager._animator.SetInteger("CurrentAnimation", 0);
         }
     }
 
-    IEnumerator AttackRoutine(Vector3 target, float seconds)
+    IEnumerator AttackRoutine(GameObject target, float seconds)
     {
-        yield return new WaitForSeconds(seconds);
-        if (inProximity == true){
-            _bearManager.Attack(target);
+        for (float timer = 0.1f; timer < seconds; timer += 0.1f)
+        {
+            yield return new WaitForSeconds(.1f);
+            if(!inProximity)
+            {
+               break;
+            }
+        }
+        if(inProximity)
+        {
+            _bearManager.Attack(target.transform.position);
         }
     }
 }
