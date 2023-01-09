@@ -5,23 +5,32 @@ using UnityEngine;
 public class Plant : MonoBehaviour
 {
     private int state;
-    public Animator animator;
     public GameObject reward;
     public Transform rewardLocation;
+
+    public SpriteRenderer plantSpriteRenderer;
+    public Sprite[] plantSprites;
 
     // Start is called before the first frame update
     void Start()
     {
         state = 0;
-        //animator = GetComponent<Animator>();
         UpdateVisuals();
     }
 
     public void Action(List<string> items)
     {
+        if(state == 3)
+        {
+            GetReward();
+        }
+
         if(CheckItems(items)){
-            state += 1;
-            if(state >= 3)
+            if(state < 4)
+            {
+                state += 1;
+            }
+            else if(state == 3)
             {
                 GetReward();
             }
@@ -36,9 +45,11 @@ public class Plant : MonoBehaviour
             case 0:
                 return items.Contains("Rake");
             case 1:
-                return items.Contains("WaterCan");
-            case 2:
                 return items.Contains("Seeds");
+            case 2:
+                return items.Contains("WaterCan");
+            case 3:
+                return true;
             default:
                 return items.Contains("Banana");
         }
@@ -48,13 +59,13 @@ public class Plant : MonoBehaviour
     {
         // fill in
         Debug.Log("You win");
-
+       plantSpriteRenderer.color = Color.green;
         Instantiate(reward, rewardLocation.position, Quaternion.identity);
     }
 
     public void UpdateVisuals()
     {
-        animator.SetInteger("PlantState", state);
+        plantSpriteRenderer.sprite = plantSprites[state];
         Debug.Log("Plant State: " + state);
     }
 }

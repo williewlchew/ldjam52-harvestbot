@@ -1,12 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
     public GameManager gameManager;
     public float speed;
     public Animator animator;
+    public string currentLevel;
+
+
+    private bool canMove = true;
     
     private Vector3 normalizedInputs; 
     private Rigidbody selfRigedbody;
@@ -33,8 +38,11 @@ public class PlayerController : MonoBehaviour
 
     public void FixedUpdate()
     {
-        MoveWithInput();
-        AnimateWithInput();
+        if(canMove)
+        {
+            MoveWithInput();
+            AnimateWithInput();
+        }
     }
 
     /* DATA */
@@ -74,8 +82,16 @@ public class PlayerController : MonoBehaviour
 
     void OnCollisionEnter(Collision other){
         if(other.gameObject.tag == "Hazard"){
-            Destroy(this.gameObject);
+            canMove = false;
+            StartCoroutine(DeadRoutine());
         }
+    }
+
+    IEnumerator DeadRoutine()
+    {
+        animator.SetFloat("WalkDirection", 5);
+        yield return new WaitForSeconds(1f);
+        AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(currentLevel);
     }
 
     void OnTriggerEnter(Collider other)
