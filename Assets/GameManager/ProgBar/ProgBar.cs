@@ -40,9 +40,9 @@ public class ProgBar : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButtonDown(1)) {
-            Debug.Log("CLICK");
-            StartProgBar();
-        }
+        // if (Input.GetMouseButtonDown(1)) {
+        //     Debug.Log("CLICK");
+        //     StartProgBar();
+        // }
     }
 }
