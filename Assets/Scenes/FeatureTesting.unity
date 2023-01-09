@@ -1256,6 +1256,10 @@ PrefabInstance:
       propertyPath: gameManager
       value: 
       objectReference: {fileID: 680069536}
+    - target: {fileID: 53583594269088452, guid: b76da4281cfee414a969543cacd89fee, type: 3}
+      propertyPath: currentLevel
+      value: FeatureTesting
+      objectReference: {fileID: 0}
     - target: {fileID: 53583594269088453, guid: b76da4281cfee414a969543cacd89fee, type: 3}
       propertyPath: m_RootOrder
       value: 2
