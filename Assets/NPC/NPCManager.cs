@@ -25,9 +25,9 @@ public class NPCManager : MonoBehaviour
     void Update () 
     { 
         // moving
-        if(AtCurrentGoal(patrolPoints2[currentPatrol2Point].position)){
+        if(AtCurrentGoal(patrolPoints2[currentPatrol2Point].position) && !attacking){
             currentPatrol2Point += 1;
-            if(currentPatrol2Point == patrolPoints2.Length && !attacking){
+            if(currentPatrol2Point == patrolPoints2.Length){
                 currentPatrol2Point = 0;
             }
         }
