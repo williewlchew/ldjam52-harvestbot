@@ -8,6 +8,8 @@ public class Plant : MonoBehaviour
     public Animator animator;
     public GameObject reward;
     public Transform rewardLocation;
+    public WaterAudio waterAudio;
+    public ShovelAudio shovelAudio;
 
     // Start is called before the first frame update
     void Start()
@@ -34,8 +36,10 @@ public class Plant : MonoBehaviour
         switch (state) 
         {
             case 0:
+                shovelAudio.PlayShovelSound();
                 return items.Contains("Rake");
             case 1:
+                waterAudio.PlayWaterSound();
                 return items.Contains("WaterCan");
             case 2:
                 return items.Contains("Seeds");
