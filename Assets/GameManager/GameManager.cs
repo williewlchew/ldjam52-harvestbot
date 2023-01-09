@@ -105,7 +105,7 @@ public class GameManager : MonoBehaviour
     void Awake()
     {
         // Debug.Log(SceneManager.GetActiveScene().name);
-        if(SceneManager.GetActiveScene().name == "Level0") {
+        if(SceneManager.GetActiveScene().name == "MainMenu") {
             Pause();
         }
     }
@@ -113,7 +113,7 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        Pause();
     }
 
     // Update is called once per frame
