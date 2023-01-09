@@ -359,6 +359,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 3892941833281360540, guid: 5d1b6b523c62b0f458c525637e34b93d, type: 3}
   m_PrefabInstance: {fileID: 12544922}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &220391433 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2044612729854144848, guid: bd958946e37c1a343b7fff8d92d2c82d, type: 3}
+  m_PrefabInstance: {fileID: 3011050795843115374}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2fc5bd5af04a766488af94bc4c325a09, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &268574455
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -969,6 +980,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 8267477131907349749, guid: 4f4d7c4a57dd2a543813ae437e206a27, type: 3}
     - target: {fileID: 7365601161431789925, guid: ba035b572be8f2347ad6c0b1cf2df636, type: 3}
+      propertyPath: waterAudio
+      value: 
+      objectReference: {fileID: 1982357345}
+    - target: {fileID: 7365601161431789925, guid: ba035b572be8f2347ad6c0b1cf2df636, type: 3}
+      propertyPath: shovelAudio
+      value: 
+      objectReference: {fileID: 1301501386}
+    - target: {fileID: 7365601161431789925, guid: ba035b572be8f2347ad6c0b1cf2df636, type: 3}
       propertyPath: rewardLocation
       value: 
       objectReference: {fileID: 2119389470}
@@ -1264,6 +1283,17 @@ PrefabInstance:
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 09ab92d005f2715439eee81d18a6eca4, type: 3}
+--- !u!114 &1301501386 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3212435475087656320, guid: bd958946e37c1a343b7fff8d92d2c82d, type: 3}
+  m_PrefabInstance: {fileID: 3011050795843115374}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 94605d03a5b58904aac98d05151c763b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1459208863 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 53583593587904373, guid: b76da4281cfee414a969543cacd89fee, type: 3}
@@ -1492,6 +1522,17 @@ PrefabInstance:
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 83c34cae5a763dd43b5f8ad8d0262251, type: 3}
+--- !u!114 &1982357345 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8336103643880510764, guid: bd958946e37c1a343b7fff8d92d2c82d, type: 3}
+  m_PrefabInstance: {fileID: 3011050795843115374}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba01f04ffd38fe04dab267ee83d038b5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &2038450522 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1433914375, guid: b76da4281cfee414a969543cacd89fee, type: 3}
@@ -1524,6 +1565,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 3.03
       objectReference: {fileID: 0}
+    - target: {fileID: 5227082832373647885, guid: 4b621b8531059ea49915b16e93783e7b, type: 3}
+      propertyPath: switchAudio
+      value: 
+      objectReference: {fileID: 220391433}
     - target: {fileID: 5227082833137331213, guid: 4b621b8531059ea49915b16e93783e7b, type: 3}
       propertyPath: m_Name
       value: SwitchPrefab-Tutorial (1)
@@ -1763,6 +1808,10 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5227082832373647885, guid: 4b621b8531059ea49915b16e93783e7b, type: 3}
+      propertyPath: switchAudio
+      value: 
+      objectReference: {fileID: 220391433}
     - target: {fileID: 5227082833137331213, guid: 4b621b8531059ea49915b16e93783e7b, type: 3}
       propertyPath: m_Name
       value: SwitchPrefab-Tutorial

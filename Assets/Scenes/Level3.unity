@@ -406,7 +406,7 @@ PrefabInstance:
     - target: {fileID: 9119666640539057885, guid: fba9a6ffbda11a44d89faa579d47502d, type: 3}
       propertyPath: UIVictory
       value: 
-      objectReference: {fileID: 4442536422251879680}
+      objectReference: {fileID: 5905193625156165691}
     - target: {fileID: 9119666640539057885, guid: fba9a6ffbda11a44d89faa579d47502d, type: 3}
       propertyPath: UIWateringCan
       value: 
@@ -602,11 +602,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 4722587179846522151, guid: c7940f6816d9cdd49a9ec5d3f820412b, type: 3}
   m_PrefabInstance: {fileID: 5905193625156165690}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &4442536422251879680 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7805997120873004346, guid: c7940f6816d9cdd49a9ec5d3f820412b, type: 3}
-  m_PrefabInstance: {fileID: 5905193625156165690}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &4442536423173342186 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7805997122858181584, guid: c7940f6816d9cdd49a9ec5d3f820412b, type: 3}
@@ -725,3 +720,8 @@ PrefabInstance:
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: c7940f6816d9cdd49a9ec5d3f820412b, type: 3}
+--- !u!1 &5905193625156165691 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3321901048627554715, guid: c7940f6816d9cdd49a9ec5d3f820412b, type: 3}
+  m_PrefabInstance: {fileID: 5905193625156165690}
+  m_PrefabAsset: {fileID: 0}

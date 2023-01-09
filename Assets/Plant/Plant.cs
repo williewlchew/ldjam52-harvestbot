@@ -7,6 +7,8 @@ public class Plant : MonoBehaviour
     private int state;
     public GameObject reward;
     public Transform rewardLocation;
+    public ShovelAudio shovelAudio;
+    public WaterAudio waterAudio;
 
     public SpriteRenderer plantSpriteRenderer;
     public Sprite[] plantSprites;
@@ -43,10 +45,12 @@ public class Plant : MonoBehaviour
         switch (state) 
         {
             case 0:
+                shovelAudio.PlayShovelSound();
                 return items.Contains("Rake");
             case 1:
                 return items.Contains("Seeds");
             case 2:
+                waterAudio.PlayWaterSound();
                 return items.Contains("WaterCan");
             case 3:
                 return true;

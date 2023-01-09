@@ -76,3 +76,9 @@ crashlytics-build.properties
 
 # Mac Files
 .DS_Store
+
+# Misc
+webgl/
+node_modules/
+package-lock.json
+package.json

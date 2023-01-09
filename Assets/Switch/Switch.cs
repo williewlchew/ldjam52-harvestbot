@@ -7,6 +7,7 @@ public class Switch : MonoBehaviour
     public SwitchPhase switchPhase1;
     public SwitchPhase switchPhase2;
     public SpriteRenderer _spriteRenderer;
+    public DoorSwitchAudio switchAudio;
     private bool phase1 = true;
 
     public void Start()
@@ -31,6 +32,7 @@ public class Switch : MonoBehaviour
                 _spriteRenderer.flipX = phase1;
             }
             phase1 = !(phase1);
+            switchAudio.PlayDoorSwitchSound();
         }
     }
 
