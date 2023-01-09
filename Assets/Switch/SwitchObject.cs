@@ -5,17 +5,17 @@ using UnityEngine;
 public class SwitchObject : MonoBehaviour
 {
     public GameObject collider;
-    public Animator animator;
+    public GameObject spriteRenderer;
 
     public void EnableObject()
     {
         collider.SetActive(true);
-        animator.SetBool("Enabled", true);
+        spriteRenderer.SetActive(true);
     }
 
     public void DisableObject()
     {
         collider.SetActive(false);
-        animator.SetBool("Enabled", false);
+        spriteRenderer.SetActive(false);
     }
 }
