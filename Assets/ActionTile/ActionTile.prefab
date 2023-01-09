@@ -24,7 +24,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2119389469}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.5, z: 1.46}
+  m_LocalPosition: {x: 0, y: 0.5, z: 1.19}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -41,7 +41,6 @@ GameObject:
   m_Component:
   - component: {fileID: 7365601160194022163}
   - component: {fileID: 7365601160194022162}
-  - component: {fileID: 7365601160194022156}
   m_Layer: 0
   m_Name: Sprite
   m_TagString: Untagged
@@ -105,8 +104,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 3
-  m_Sprite: {fileID: 21300000, guid: 131370e6e8b408142ae46c1dc3fec986, type: 3}
-  m_Color: {r: 0.3773585, g: 0.07410203, b: 0.012459958, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 6cc86324965852d47866bf0bb08efa47, type: 3}
+  m_Color: {r: 1, g: 0.42514148, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -116,26 +115,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!95 &7365601160194022156
-Animator:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7365601160194022161}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 47bc8570f3b6e444e9739ac43597263e, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &7365601161431789929
 GameObject:
   m_ObjectHideFlags: 0
@@ -145,7 +124,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7365601161431789924}
-  - component: {fileID: 7365601161431789931}
   - component: {fileID: 7365601161431789930}
   - component: {fileID: 7365601161431789925}
   m_Layer: 0
@@ -170,23 +148,8 @@ Transform:
   - {fileID: 7365601160194022163}
   - {fileID: 2119389470}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &7365601161431789931
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7365601161431789929}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 302fbffafafda364194135a62edd93de, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _spriteRenderer: {fileID: 7365601160194022162}
-  selectedColor: {r: 1, g: 1, b: 1, a: 0.87058824}
-  unselectedColor: {r: 1, g: 1, b: 1, a: 0.1}
 --- !u!65 &7365601161431789930
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -212,12 +175,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6823b71a10ba164eb28035471918170, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  reward: {fileID: 8267477131907349749, guid: 4f4d7c4a57dd2a543813ae437e206a27, type: 3}
+  reward: {fileID: 1095338713702210343, guid: 1baff4adcf647054ab98b694bf27e451, type: 3}
   rewardLocation: {fileID: 2119389470}
   plantSpriteRenderer: {fileID: 7365601160194022162}
   plantSprites:
   - {fileID: 21300000, guid: 6cc86324965852d47866bf0bb08efa47, type: 3}
-  - {fileID: 21300000, guid: e6b18fce3a77d944b872de851264f10c, type: 3}
   - {fileID: 21300000, guid: e6b18fce3a77d944b872de851264f10c, type: 3}
   - {fileID: 21300000, guid: 9a91128c54afc2a43984418d70c58157, type: 3}
   - {fileID: 21300000, guid: 7d0606aecc633374ba8c24fb57a1d2c4, type: 3}
